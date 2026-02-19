@@ -1,3 +1,5 @@
+/* Updated styles for Ana's HomeCare website */
+
 /* Root and base styling */
 :root {
   --main-color: #2c5aa0; /* Professional healthcare blue */
@@ -14,11 +16,7 @@
   --success-color: #38a169; /* Green for positive actions */
   --shadow: 0 4px 12px rgba(45, 55, 72, 0.08);
   --shadow-lg: 0 10px 25px rgba(45, 55, 72, 0.1);
-  --gradient-primary: linear-gradient(
-    135deg,
-    var(--main-color) 0%,
-    var(--accent-color) 100%
-  );
+  --gradient-primary: linear-gradient(135deg, var(--main-color) 0%, var(--accent-color) 100%);
   --gradient-warm: linear-gradient(135deg, var(--warm-accent) 0%, #f6ad55 100%);
 }
 
@@ -77,14 +75,6 @@ ul {
 }
 
 /* Header and Nav */
-/* header {
-  position: sticky;
-  top: 0;
-  background-color: var(--main-bg-color);
-  box-shadow: var(--shadow);
-  padding: 0.5rem 1rem;
-  z-index: 1000;
-} */
 header {
   position: sticky;
   top: 0;
@@ -92,7 +82,7 @@ header {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   border-bottom: 1px solid var(--main-border-color);
   z-index: 9999;
   isolation: isolate;
@@ -116,6 +106,12 @@ nav > span {
   gap: 1rem;
 }
 
+nav > span > img {
+  width: 60px;
+  height: auto;
+  border-radius: 8px;
+}
+
 nav > span > h1 {
   margin: 0;
   font-size: 1.75rem;
@@ -124,12 +120,6 @@ nav > span > h1 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
-}
-
-nav > span > img {
-  width: 80px;
-  height: auto;
-  border-radius: 8px;
 }
 
 nav a {
@@ -160,6 +150,37 @@ nav ul {
 
 nav li {
   margin: 0;
+}
+
+/* Header call-to-action */
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-cta .phone-number {
+  color: var(--main-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.header-cta .btn-header {
+  background: var(--gradient-warm);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: var(--shadow);
+}
+
+.header-cta .btn-header:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Hero Section */
@@ -203,17 +224,32 @@ nav li {
 
 .hero-content h2 {
   color: white;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.hero-content p {
-  font-size: 1.25rem;
+.hero-features {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-features li {
+  font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.95);
-  margin-bottom: 2rem;
-  line-height: 1.6;
+  font-weight: 500;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .btn-primary {
@@ -237,7 +273,57 @@ nav li {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Section and Card Styling */
+.btn-secondary {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background: var(--gradient-primary);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: var(--shadow);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Trust badges */
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.badge i {
+  font-size: 2rem;
+  color: var(--main-color);
+  margin-bottom: 0.5rem;
+}
+
+.badge p {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+/* Section and card styling */
 section {
   margin: 3rem 0;
   padding: 2rem;
@@ -324,86 +410,157 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Contact Section */
-.contact-info {
-  background: linear-gradient(
-    135deg,
-    var(--main-color) 0%,
-    var(--accent-color) 100%
-  );
-  color: white;
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: var(--shadow-lg);
-  max-width: 600px;
-  margin: auto;
+/* Service cards */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.service-card {
+  background: var(--card-bg);
+  border: 1px solid var(--main-border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.contact-info p {
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 1.1rem;
-  margin: 1rem 0;
+.service-card i {
+  font-size: 2rem;
+  color: var(--main-color);
 }
 
-.contact-info strong {
+.service-card h4 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+  color: var(--main-color);
+}
+
+.service-card p {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* How it works steps */
+#how-it-works .steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.step {
+  flex: 1;
+  min-width: 220px;
+  background: var(--card-bg);
+  border: 1px solid var(--main-border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.step-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
   color: white;
-  font-weight: 600;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
-.contact-info a {
-  color: white;
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-color: rgba(255, 255, 255, 0.5);
-  transition: all 0.2s ease;
+.how-buttons {
+  text-align: center;
+  margin-top: 2rem;
 }
 
-.contact-info a:hover {
-  text-decoration-color: white;
-  color: var(--warm-accent);
-}
-
-.contact-info .btn-primary {
-  background: var(--gradient-warm);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  margin-top: 1.5rem;
-}
-
-/* Lists */
-ul {
+/* Caregiver standards */
+#caregiver-standards .standards-list {
   list-style: none;
   padding: 0;
+  margin: 1.5rem 0;
 }
 
-ul li {
+.standards-list li {
   position: relative;
-  padding: 0.75rem 0 0.75rem 2rem;
+  padding-left: 2rem;
   margin: 0.5rem 0;
   color: var(--text-dark);
   font-weight: 500;
 }
 
-ul li::before {
-  content: "✓";
+.standards-list li::before {
+  content: "\2713"; /* check mark */
   position: absolute;
   left: 0;
-  top: 0.75rem;
+  top: 0.1rem;
   color: var(--success-color);
   font-weight: bold;
   font-size: 1.1rem;
+}
+
+/* FAQ */
+#faq .faq-item {
+  margin: 1.5rem 0;
+}
+
+#faq .faq-item h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+#faq .faq-item p {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+/* Contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--main-border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Outfit", sans-serif;
+  color: var(--text-dark);
+  background: #fff;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form button {
+  align-self: center;
 }
 
 /* Testimonials */
 blockquote {
   font-style: italic;
   padding: 2rem;
-  background: linear-gradient(
-    135deg,
-    rgba(44, 90, 160, 0.05) 0%,
-    rgba(74, 144, 184, 0.05) 100%
-  );
+  background: linear-gradient(135deg, rgba(44, 90, 160, 0.05) 0%, rgba(74, 144, 184, 0.05) 100%);
   border-left: 4px solid var(--main-color);
   border-radius: 8px;
   margin: 2rem 0;
@@ -461,10 +618,6 @@ h3:hover i {
     flex-wrap: wrap;
   }
 
-  nav li {
-    margin: 0;
-  }
-
   .hero-content h2 {
     font-size: 2rem;
   }
@@ -502,5 +655,18 @@ h3:hover i {
   td {
     padding: 1rem;
     font-size: 0.9rem;
+  }
+
+  .service-cards {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  #how-it-works .steps {
+    flex-direction: column;
+  }
+
+  .header-cta {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
