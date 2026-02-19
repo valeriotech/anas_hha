@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Ana's Home Healthcare offers
+      content="Ana's HomeCare offers
     compassionate, affordable senior
     care services in North & Central
     New Jersey and New York. Learn more about our caregivers, services, and
@@ -23,14 +23,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Ana's Home Healthcare</title>
+    <title>Ana's HomeCare</title>
   </head>
   <body class="outfit-body">
     <header>
       <nav>
         <span>
-          <img src="./public/logo.png" alt="Ana's Home Healthcare Logo" />
-          <h1>Ana's Home Healthcare</h1>
+          <img src="./public/logo.png" alt="Ana's HomeCare Logo" />
+          <h1>Ana's HomeCare</h1>
         </span>
         <ul>
           <li><a href="#home">Home</a></li>
@@ -58,7 +58,7 @@
 
     <main>
       <section id="home">
-        <h2>Welcome to Ana's Home Healthcare</h2>
+        <h2>Welcome to Ana's HomeCare</h2>
         <p>
           Your trusted partner in providing exceptional, affordable care for
           seniors and individuals with disabilities. We believe everyone
@@ -76,7 +76,7 @@
       <section id="about">
         <h3><i class="fas fa-users"></i> Who We Are</h3>
         <p>
-          Ana's Home Healthcare is a licensed, compassionate home healthcare
+          Ana's HomeCare is a licensed, compassionate home healthcare
           agency dedicated to providing affordable, high-quality care for
           seniors and individuals with disabilities. Our mission is to empower
           our clients to live independently and safely in the comfort of their
@@ -91,7 +91,7 @@
       </section>
 
       <section>
-        <h3><i class="fas fa-star"></i> Why Choose Ana's Home Healthcare</h3>
+        <h3><i class="fas fa-star"></i> Why Choose Ana's HomeCare</h3>
         <ul>
           <li>Affordable, transparent pricing with no hidden fees</li>
           <li>Experienced, certified caregivers with extensive training</li>
@@ -107,7 +107,7 @@
       <section>
         <h3><i class="fas fa-certificate"></i> Our Credentials & Commitment</h3>
         <p>
-          Ana's Home Healthcare is fully licensed, bonded, and insured to
+          Ana's HomeCare is fully licensed, bonded, and insured to
           provide home healthcare services in New Jersey and New York. Our
           commitment to excellence means you can trust us with your most
           precious family members. We maintain the highest standards of
@@ -212,7 +212,7 @@
           <i class="fas fa-stethoscope"></i> Health Conditions We Specialize In
         </h3>
         <p>
-          At Ana's Home Healthcare, we understand that each client has unique
+          At Ana's HomeCare, we understand that each client has unique
           health challenges and care requirements. Our experienced caregivers
           are specially trained to provide compassionate support for a wide
           variety of health and cognitive conditions. We collaborate closely
@@ -338,7 +338,7 @@
           <footer>&ndash; Maria R., Clifton, NJ</footer>
         </blockquote>
         <blockquote>
-          "The team at Ana's Home Healthcare provided exceptional care for my
+          "The team at Ana's HomeCare provided exceptional care for my
           mother during her recovery. Their professionalism and kindness gave
           our family peace of mind during a difficult time."
           <footer>&ndash; Carlos M., Paterson, NJ</footer>
@@ -358,9 +358,11 @@
           </p>
           <p>
             <strong>Email:</strong>
-            <a href="mailto:ana@anashhc.com">ana@anashhc.com</a>
+            <a href="mailto:anashomecarenjny@gmail.com"
+              >anashomecarenjny@gmail.com</a
+            >
           </p>
-          <a class="btn-primary" href="mailto:ana@anashhc.com"
+          <a class="btn-primary" href="mailto:anashomecarenjny@gmail.com"
             >Send Us an Email Today</a
           >
         </div>
@@ -368,7 +370,12 @@
     </main>
 
     <footer>
-      <p>&copy; 2025 Ana's Home Healthcare. All rights reserved.</p>
+      <p>&copy; <span id="current-year"></span> Ana's HomeCare. All rights reserved.</p>
     </footer>
+
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
   </body>
 </html>

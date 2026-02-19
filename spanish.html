@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Ana's Home Healthcare ofrece atención compasiva y asequible para personas mayores en Nueva Jersey y Nueva York. Aprende más sobre nuestros cuidadores, servicios y áreas que atendemos."
+      content="Ana's HomeCare ofrece atención compasiva y asequible para personas mayores en Nueva Jersey y Nueva York. Aprende más sobre nuestros cuidadores, servicios y áreas que atendemos."
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,14 +20,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Ana's Home Healthcare</title>
+    <title>Ana's HomeCare</title>
   </head>
   <body class="outfit-body">
     <header>
       <nav>
         <span>
-          <img src="./public/logo.png" alt="Logo de Ana's Home Healthcare" />
-          <h1>Ana's Home Healthcare</h1>
+          <img src="./public/logo.png" alt="Logo de Ana's HomeCare" />
+          <h1>Ana's HomeCare</h1>
         </span>
         <ul>
           <li><a href="#home">Inicio</a></li>
@@ -55,7 +55,7 @@
 
     <main>
       <section id="home">
-        <h2>Bienvenido a Ana's Home Healthcare</h2>
+        <h2>Bienvenido a Ana's HomeCare</h2>
         <p>
           Su socio de confianza para brindar atención excepcional y asequible a
           personas mayores e individuos con discapacidades. Creemos que todos
@@ -73,7 +73,7 @@
       <section id="about">
         <h3><i class="fas fa-users"></i> Quiénes Somos</h3>
         <p>
-          Ana's Home Healthcare es una agencia de atención médica domiciliaria
+          Ana's HomeCare es una agencia de atención médica domiciliaria
           licenciada y compasiva, dedicada a brindar atención asequible y de
           alta calidad para personas mayores e individuos con discapacidades.
           Nuestra misión es empoderar a nuestros clientes para que vivan de
@@ -91,7 +91,7 @@
 
       <section>
         <h3>
-          <i class="fas fa-star"></i> Por Qué Elegir Ana's Home Healthcare
+          <i class="fas fa-star"></i> Por Qué Elegir Ana's HomeCare
         </h3>
         <ul>
           <li>Precios asequibles y transparentes sin costos ocultos</li>
@@ -115,7 +115,7 @@
           <i class="fas fa-certificate"></i> Nuestras Credenciales y Compromiso
         </h3>
         <p>
-          Ana's Home Healthcare está completamente licenciada, registrada y
+          Ana's HomeCare está completamente licenciada, registrada y
           asegurada para proporcionar servicios de atención médica domiciliaria
           en Nueva Jersey y Nueva York. Nuestro compromiso con la excelencia
           significa que puede confiar en nosotros con sus miembros familiares
@@ -229,7 +229,7 @@
           Especializamos
         </h3>
         <p>
-          En Ana's Home Healthcare, entendemos que cada cliente tiene desafíos
+          En Ana's HomeCare, entendemos que cada cliente tiene desafíos
           de salud únicos y requisitos de atención específicos. Nuestros
           cuidadores experimentados están especialmente capacitados para brindar
           apoyo compasivo para una amplia variedad de condiciones de salud y
@@ -360,7 +360,7 @@
           <footer>&ndash; María R., Clifton, NJ</footer>
         </blockquote>
         <blockquote>
-          "El equipo de Ana's Home Healthcare proporcionó atención excepcional
+          "El equipo de Ana's HomeCare proporcionó atención excepcional
           para mi madre durante su recuperación. Su profesionalismo y amabilidad
           nos dieron tranquilidad a nuestra familia durante un tiempo difícil."
           <footer>&ndash; Carlos M., Paterson, NJ</footer>
@@ -382,9 +382,11 @@
           </p>
           <p>
             <strong>Correo Electrónico:</strong>
-            <a href="mailto:ana@anashhc.com">ana@anashhc.com</a>
+            <a href="mailto:anashomecarenjny@gmail.com"
+              >anashomecarenjny@gmail.com</a
+            >
           </p>
-          <a class="btn-primary" href="mailto:ana@anashhc.com"
+          <a class="btn-primary" href="mailto:anashomecarenjny@gmail.com"
             >Envíanos un Correo Hoy</a
           >
         </div>
@@ -392,7 +394,12 @@
     </main>
 
     <footer>
-      <p>&copy; 2025 Ana's Home Healthcare. Todos los derechos reservados.</p>
+      <p>&copy; <span id="current-year"></span> Ana's HomeCare. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
   </body>
 </html>
